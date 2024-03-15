@@ -59,11 +59,7 @@ function desencriptar(textoDesencriptado){
 function btnCopiar(){
     let textoCopiado = msjResultado.textContent;
     areaTexto.value=textoCopiado;
-
-    let botonCopy = document.querySelector('.botonCopiar');
-    botonCopy.addEventListener('click', () => {
-        navigator.clipboard.writeText(msjResultado.textContent)
-    });
+    navigator.clipboard.writeText(msjResultado.textContent)
 }
 
 let botonDeTema = document.getElementById('botonTema');
