@@ -1,0 +1,714 @@
+.menu{
+    position:fixed;
+    width:13%;
+    height:70%;
+    top: 0;
+    left: -13%;
+    transition: all 0.8s;
+    z-index: 9;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.contenedorMenu{
+    height: 30%;
+    width: 50px;
+    position: relative;
+    top: 40%;
+    background-size:cover;
+}
+
+.menuFondo{
+    width: auto;
+    position: fixed;
+}
+
+.contenedorBotonesMenu{
+    width: 150px;
+    height: 150px;
+    position: fixed;
+
+}
+
+.menu:hover{
+    left: -2%;
+}
+
+.tituloMenu{
+    display: inline-block;
+    position: relative;
+    margin: 40% 0 10% 30%;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    z-index: 10;
+}
+
+.cajaTema {
+    display: inline-block;
+    margin: 0 0 10% 30%;
+    width: 120px;
+    height: 30px;
+    position: relative;
+    border-radius: 300px;
+    z-index: 99;
+}
+
+.inputTema {
+    display: none;
+}
+
+.label {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.ball {
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    transform: translate(-100%, -50%);
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.textoTema {
+    position: absolute;
+    top: 20%;
+    padding-left: 20%;
+    color: #000;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.textoTemaOscuro {
+    position: absolute;
+    top: 20%;
+    padding-right: 20%;
+    color: #ffffff;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.inputTema:checked + .label .textoTema {
+    opacity: 0;
+}
+
+.inputTema:checked + .label .textoTemaOscuro {
+    opacity: 1;
+}
+
+.textoTema {
+    left: 10px;
+}
+
+.textoTemaOscuro {
+    right: 10px;
+}
+
+.inputTema:checked + .label {
+    background-color: #333;
+}
+
+.inputTema:checked + .label .ball {
+    transform: translate(calc(100% - -40px), -50%);
+    background-color: #000;
+}
+
+.dark-theme h2, .dark-theme .resultado{
+    color: #fff;
+}
+
+.dark-theme .contenedorHistorial{
+    background: #333;
+}
+
+.dark-theme .textoHistorial{
+    color: #ffffff;
+}
+
+.dark-theme li{
+    color: #969696;
+}
+
+.dark-theme h4{
+    color: #6e6e6e;
+}
+
+.dark-theme .historial{
+    background: #3f3f3f;
+}
+
+body.dark-theme{
+    background: url(img/fondoOscuro.png);
+}
+
+.inputHistorial{
+    display: none;
+}
+
+.labelHistorial{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+}
+
+.contenedorHistorial{
+    display: inline-block;
+    position: relative;
+    margin-left: 30%;
+    width: 120px;
+    height: 30px;
+    background: #ddd;
+    border-radius: 30px;
+}
+
+.iconoHistorial{
+    width: 30px;
+    margin-left: 1%;
+}
+
+.textoHistorial{
+    margin: auto 0;
+    margin-left: 2%;
+}
+
+.posicionHistorial{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.cajaHistorial{
+    position: fixed;
+    display: block;
+    width:100%;
+    height:160%;
+    backdrop-filter: blur(5px);
+}
+
+.cajaCerrarPestana{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    margin: 2.5%;
+}
+
+.inputCerrarHistorial{
+    display: none;
+}
+
+.labelCerrarH{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.iconoCerrar{
+    width: 100%;
+    opacity: 0.5;
+}
+
+.iconoCerrar:hover{
+    opacity: 1;
+}
+
+.historial{
+    margin: 4.5% auto;
+    width: 70%;
+    height: 50%;
+    position: relative;
+    background: #e4e4e4;
+    border-radius: 50px;
+    box-shadow: 0 0 100px -20px #0000008d;
+}
+
+.tituloHistorial{
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 1000;
+    text-align: center;
+    padding: 0.5em;
+    color: #888888;
+}
+
+.contenedorParrafoH{
+    display: flex; 
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.contenedorListasHistorial{
+    display: flex;
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.historialEncriptado, .historialDesencriptado{
+    display: inline-block;
+}
+
+.contenedorUL{
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+}
+
+.parrafoULhistorial{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0 60px;
+}
+
+li{
+    color: #404040;
+    font-size: 25px;
+    padding: 2%;
+}
+
+li::before{
+    content: "●";
+}
+
+body{
+    font-family: Poppins;
+    background: url(img/fondo3.png);
+}
+
+header{
+    background-color: transparent;
+    padding: 1%;
+}
+
+h1{
+    text-align: center;
+}
+
+.imagenDeEncabezado{
+    width: 6%;
+}
+
+h2{
+    text-align: center;
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-size: 5em;
+}
+
+.caja{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.primerCuadro{
+    width: 50%;
+    display: inline;
+    z-index: 2;
+}
+
+.CajaTextoDeEntrada{
+    background: linear-gradient(48deg, #F5F8FF, #7782E2, #EDF0F5);
+    height:450px;
+    width:100%;
+    filter:drop-shadow(12px 0px 26.700000762939453px rgba(0,0,0,0.18000000715255737));
+    border-radius:50px;
+}
+
+.ingresarTexto{
+    position: relative;
+    background: transparent;
+    border: 0px solid transparent;
+    padding: 1em 1em;
+    width: 80%;
+    height: 70%;
+    font-size: 3em;
+    font-family: Poppins;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: lowercase;
+}
+
+.ingresarTexto::-webkit-scrollbar{
+    width: 5px;
+}
+
+.ingresarTexto::-webkit-scrollbar-track{
+    background: #ffffff66;
+}
+
+.ingresarTexto::-webkit-scrollbar-thumb{
+    background-color: #170933;
+    border-radius: 6px;
+}
+
+.ingresarTexto:focus{
+    outline: none;
+}
+
+.ingresarTexto::placeholder{
+    color: #00000069;
+}
+
+.Botones{
+    width: 100%;
+    position: relative;
+}
+
+.botonDesencriptador{
+    background: rgb(106, 87, 167);    
+    width:55%;
+    height: 100px;
+    filter:dop-shadow(19px 0px 36px rgba(0, 0, 0, 0.449));
+    margin-left: calc(45%);
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border: 0px solid transparent;
+    cursor: pointer;
+    position: absolute;
+    transition: font-size 300ms;
+}
+
+.botonDesencriptador:hover{
+    background: linear-gradient(#718ec1 50%, #504b87);
+    font-size: 31px;
+}
+
+.botonEncriptar{
+    background: rgb(57, 47, 91);    
+    width: 55%;
+    height: 100px;
+    filter:dop-shadow(19px 0px 36.29999923706055px rgba(0, 0, 0, 0.584));
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 0 0 50px 50px;
+    border: 0px solid transparent;
+    cursor:pointer;
+    transition: font-size 300ms;
+}
+
+.botonEncriptar:hover{
+    background: linear-gradient(#545084, #24223b);
+    font-size: 31px;
+}
+
+.botonEncriptar:active, .botonDesencriptador:active, .botonCopiar:active{
+    color: #a8aeb8;
+}
+
+.segundoCuadro{
+    width: 50%;
+    display: inline;
+}
+
+.CajaTextoResultado{
+    height:450px;
+    width:100%;
+    border-radius:50px;
+    background: linear-gradient(48deg, #f5f8ff6c, #7782e263, #edf0f565);
+    position: relative;
+    left: calc(-10%);
+}
+
+.desenfoqueResultado{
+    height:100%;
+    width:100%;
+    border-radius:50px;
+    backdrop-filter: blur(10px);
+}
+
+.TextoResultado{
+    padding-top: calc(1em);
+    font-size: calc(3em);
+    font-weight: 800;
+    color: #ffffff81;
+    text-align:center;
+    text-transform: uppercase;
+    position: absolute;
+    right: calc(30%);
+    left: calc(30%);
+}
+
+.resultado{
+    width: 80%;
+    overflow: auto;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #1f1b30;
+    display: inline;
+    position: absolute;
+    top: calc(25%);
+    right: calc(5.5%);
+    bottom: 10%;
+}
+
+.resultado::-webkit-scrollbar{
+    width: 5px;
+}
+
+.resultado::-webkit-scrollbar-track{
+    background: #ffffff66;
+}
+
+.resultado::-webkit-scrollbar-thumb{
+    background-color: #170933;
+    border-radius: 6px;
+}
+
+.contenedorBotonCopiar{
+    width: 100%;
+    position: relative;
+    top: calc(92%);
+}
+
+.botonCopiar{
+    width: 100%;
+    height: 100px;
+    border-radius: 0 0 50px 50px;
+    border: 0px solid transparent;
+    cursor:pointer;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: Poppins;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #503f7d;
+}
+
+.botonCopiar:hover{
+    background: linear-gradient(#545084, #24223b);
+    font-size: 31px;
+}
+
+footer{
+    width: 100%;
+    background: linear-gradient(#ffffff00 20%, #000000);
+    margin-top: calc(8%);
+    padding: 50px 0 50px 0;
+}
+
+.cajaFooter{
+    display: flex;
+    margin: 0 auto;
+}
+
+.cajaImagenAutor{
+    width: 150px;
+    height: fit-content;
+    border-radius: 100px;
+    background: #ffffff;
+    border: 10px solid #ffffff;
+    margin-left: 5%;
+    animation: float 5s ease-in-out infinite;
+    overflow: hidden;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.464);
+}
+
+.imagenAutor{
+    width: 100%;
+}
+
+.textoFooter{
+    padding:35px;
+    width: calc(30%);
+}
+
+h3{
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.descripcionFooter{
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.cajaRedesSociales{
+    margin-left: calc(30%);
+    position: relative;
+}
+
+.social{
+    display:flex;
+    padding: 5px;
+}
+
+.titularesRedesSociales{
+    display: inline;
+    position: absolute;
+    color: #ffffff;
+    left: 2em;
+}
+
+.titularesRedesSociales:hover{
+    color: #668fd6;
+}
+
+.imagenRedesSociales{
+    width: 30px;
+    display: inline;
+    position: relative;
+    margin-left: 150px;
+    top: -0.5em;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@media screen and (max-width: 1024px){
+    .menu{
+        left: -18%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .menu{
+        left: -48%;
+    }
+    .menu:hover{
+        left: -8%;
+    }
+    .contenedorListasHistorial{
+        display: block;
+    }
+    .parrafoULhistorial{
+        writing-mode:vertical-lr;
+        position: absolute;
+        font-size: 16px;
+        padding: 0 0 0 7.5%;
+    }
+    #parrafoULhistorial2{
+        padding:40% 0 0 7.5%;
+        white-space: nowrap; 
+    }
+    .contenedorUL{
+        width: 95%;
+        height: 50%;
+        margin: 5% 0;
+        border: 2px solid #858585;
+        border-radius: 30px;
+    }
+    li{
+        font-size: 16px;
+    }
+    header{
+        padding: 1%;
+    }
+    h2{
+        font-size: 1em;
+    }
+    .caja{
+        width: 90%;
+        display: block;
+    }
+    .primerCuadro{
+        width: 100%;
+        display: block;
+    }
+    .CajaTextoDeEntrada{
+        height: 300px;
+    }
+    .ingresarTexto{
+        font-size: 2em;
+        height: 60%;
+    }
+    .botonEncriptar, .botonDesencriptador{
+        font-size: 1em;
+        height: 60px;
+    }
+    .botonEncriptar:hover, .botonDesencriptador:hover{
+        font-size: 1.2em;
+    }
+    .segundoCuadro{
+        width: 100%;
+        display: block;
+    }
+    .CajaTextoResultado{
+        height: 300px;
+        left: 0;
+        margin-top: 8%;
+    }
+    .TextoResultado{
+        left: auto;
+        right: auto;
+        position: relative;
+        text-align: center;
+        display: block;
+        padding: 0.5em;
+    }
+    .resultado{
+        margin: 0 auto;
+        top: auto;
+        right: auto;
+        position: relative;
+        display: block;
+        width: 90%;
+        height: 60%;
+    }
+    .contenedorBotonCopiar{
+        top: -8%;
+    }
+    .botonCopiar{
+        height: 60px;
+    }
+    .cajaFooter{
+        display: block;
+        width: 100%;
+    }
+    .cajaImagenAutor{
+        margin: 0 auto;
+        width: 20%;
+    }
+    .textoFooter{
+        margin: 0 auto;
+        width: 90%;
+        padding: 1em;
+    }
+    h3, .textoFooter{
+        text-align: center;
+    }
+    .cajaRedesSociales{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .social{
+        display: block;
+        margin: 0 auto;
+    }
+}

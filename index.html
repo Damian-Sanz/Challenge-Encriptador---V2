@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Challenge Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body class=".body">
+
+        <div class="menu">
+            <div class="contenedorMenu">
+                <img src="img/menuSmartphone.png" class="menuFondo">
+                <div class="contenedorBotonesMenu">
+                    <p class="tituloMenu">Herramientas</p>
+                    <div class="cajaTema">
+                        <input type="checkbox" id="botonTema" class="inputTema">
+                        <label for="botonTema" class="label">
+                            <p class="textoTema">Claro</p>
+                            <div class="ball"></div>
+                            <p class="textoTemaOscuro">Oscuro</p>
+                        </label>
+                      </div>
+                      <div class="contenedorHistorial" >
+                        <input type="checkbox" class="inputHistorial" id="inputHistorial">
+                        <label for="inputHistorial" class="labelHistorial">
+                            <img src="img/iconoHistorial.png" class="iconoHistorial">
+                            <p class="textoHistorial">Historial</p>
+                        </label>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="posicionHistorial" id="posicionHistorial">
+            <div class="cajaHistorial">
+                <div class="historial">
+                    <div class="cajaCerrarPestana">
+                        <input type="checkbox" class="inputCerrarHistorial" id="cerrarH" onclick="toggleHistorial()">
+                        <label for="cerrarH" class="labelCerrarH">
+                            <img src="img/iconoCerrarPestaña.png" class="iconoCerrar">
+                        </label>
+                    </div>
+                    <h4 class="tituloHistorial">Historial</h4>
+                    <div class="contenedorParrafoH">
+                        <p class="parrafoULhistorial">&#9660 Textos Encriptados</p>
+                        <p class="parrafoULhistorial" id="parrafoULhistorial2">&#9660 Textos Desencriptados</p>
+                    </div>
+                    <div class="contenedorListasHistorial">
+                        <div class="contenedorUL">
+                            <ul id="historialEncriptado">
+                            </ul>
+                        </div>
+                        <div class="contenedorUL">
+                            <ul id="historialDesencriptado">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <div class="contenedorDeslizante">
+                <div class="deslizante"></div>
+            </div>
+            <h1><img class="imagenDeEncabezado" src="img/hacker2.png"></h1>
+            <h2>Encriptador</h2>
+        </header>
+
+        <main>
+            <section class="caja">
+                <form class="primerCuadro">
+                        <div class="CajaTextoDeEntrada">
+                            <textarea id="textArea" class="ingresarTexto"  cols="30" rows="5" placeholder="Escribe el Texto a Encriptar o Desencriptar"></textarea>
+                            <div class="Botones">
+                                <input type="button" class="botonDesencriptador" value="Desencriptar" id="Bdesencriptar" onclick="btnDesencriptar()">
+                                <input type="button" class="botonEncriptar" value="Encriptar" id="Bencriptar" onclick="btnEncriptar()">
+                            </div>
+                        </div>
+                </form>
+                <form class="segundoCuadro">
+                    <div class="CajaTextoResultado">
+                        <div class="desenfoqueResultado">
+                            <leyend class="TextoResultado">Resultado</leyend>
+                            <p id="areaResultado" class="resultado"></p>
+                            <div class="contenedorBotonCopiar">
+                                <input type="button" class="botonCopiar" value="Copiar" onclick="btnCopiar()">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="cajaFooter">
+                <div class="cajaImagenAutor">
+                    <img src="img/autor2.png" class="imagenAutor">
+                </div>
+                <div class="textoFooter">
+                    <h3>¡Hola! Soy Damian</h3>
+                    <p class="descripcionFooter">"¡Descubre cómo un principiante en JavaScript, HTML y CSS conquistó un desafío increíble! Únete a mí en mis redes sociales para explorar más sobre mi viaje en el mundo del desarrollo web. ¡No te lo pierdas!"</p>
+                </div>
+                <div class="cajaRedesSociales">
+                    <div class="social">
+                        <a href="https://www.facebook.com/damian.sanz.144?locale=es_LA">
+                            <p class="titularesRedesSociales">Damian Sanz</p>
+                            <img src="img/facebook2.png" class="imagenRedesSociales">
+                        </a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.instagram.com/damian.snz/">
+                            <p class="titularesRedesSociales">damian.snz</p>
+                            <img src="img/instagram2.png" class="imagenRedesSociales">
+                        </a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/pedro-damian-perez-sanchez-2b43852a9">
+                            <p class="titularesRedesSociales">Damian Sanz</p>
+                            <img src="img/linkedin2.png" class="imagenRedesSociales">
+                        </a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.tiktok.com/@damiansanchez0110?is_from_webapp=1&sender_device=pc">
+                            <p class="titularesRedesSociales">Damian.Sanz</p>
+                            <img src="img/tiktok2.png" class="imagenRedesSociales">
+                        </a> 
+                    </div>
+                </div>
+            </div>   
+        </footer>
+        
+        <script src="app.js"></script>
+
+    </body>
+</html>
